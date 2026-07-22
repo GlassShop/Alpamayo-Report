@@ -2,9 +2,13 @@
 
 # Chapter III: Requirements Specification
 
+El enfoque esta en que el CEO y los vendedores tengan una pagina web para la gestion de la empresa, por el momento los clientes solo con acesso a la landing page.
+
 ## 3.1. User Stories
 
 La creación de las Epic y los TS se basan en los User Stories, Epic para el punto de vista del usuario (FrontEnd) y los Technical Stories para el punto de vista del developer (BackEnd).
+
+
 
 ## 3.2. Impact Mapping
 

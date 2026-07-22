@@ -4,6 +4,7 @@
 
 ## 3.1. User Stories
 
+La creación de las Epic y los TS se basan en los User Stories, Epic para el punto de vista del usuario (FrontEnd) y los Technical Stories para el punto de vista del developer (BackEnd).
 
 ## 3.2. Impact Mapping
 

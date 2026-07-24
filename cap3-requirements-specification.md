@@ -79,8 +79,36 @@ La creación de las Epic y los TS se basan en los User Stories, Epic para el pun
 | **TS03** | Equipo Técnico | Aislamiento por Subdominios y Enrutamiento HTTPS | Como DevOps Engineer, deseo forzar el uso de HTTPS/TLS y configurar subdominios independientes, para garantizar comunicaciones seguras. | **Escenario 1: Redirección SSL forzada**<br>**Dado que** se recibe una petición HTTP por el puerto 80<br>**Cuando** llega al servidor web<br>**Entonces** se redirige con HTTP 301 a la versión segura HTTPS (puerto 443)<br><br>**Escenario 2: Aislamiento por subdominio**<br>**Dado que** hay tráfico hacia `vidrieriaalpamayo.com` y `admin.vidrieriaalpamayo.com`<br>**Cuando** el servidor resuelve la petición<br>**Entonces** aplica reglas CORS y rutas aisladas para cada entorno | EPIC07 |
 | **TS04** | Equipo Técnico | Middleware Backend de Validación JWT y Filtrado IP | Como Backend Developer, deseo implementar un middleware que verifique el token JWT y valide la IP de origen, para proteger las llamadas privadas. | **Escenario 1: Validación de IP y JWT**<br>**Dado que** se envía una petición a un endpoint privado de la API<br>**Cuando** el Middleware intercepta la llamada<br>**Entonces** verifica que el token JWT sea válido y que la IP del origen coincida con el rango permitido antes de resolver la solicitud | EPIC07 |
 
-## 3.2. Impact Mapping
-
-## 3.3. Product Backlog
+## 3.2. Product Backlog
 
 Para definir el orden se toma en cuenta la prioridad en el negocio.
+
+# Product Backlog - Vidriería Alpamayo
+
+| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
+| :--- | :--- | :--- | :--- | :---: |
+| **1** | **US06** | Calculadora Interna de Vidrios a Medida | Como Vendedor, deseo calcular el costo exacto del vidrio ingresando alto, ancho, grosor y acabados, para cotizar al cliente en tiempo real. | 5 |
+| **2** | **US08** | Gestor Multi-Unidad de Medidas (mm, cm, m, pulgadas) | Como Vendedor, deseo ingresar dimensiones en la unidad que solicite el cliente, para cotizar sin conversiones manuales y evitar errores. | 3 |
+| **3** | **US07** | Cotización de Estructuras de Aluminio | Como Vendedor, deseo agregar marcos y perfiles de aluminio a la cotización, para vender estructuras completas (ventanas/mamparas). | 3 |
+| **4** | **US10** | Optimización Algorítmica de Recortes (Bin Packing NP) | Como Vendedor / Operario, deseo ejecutar un algoritmo de optimización de recortes, para minimizar el desperdicio de material y calcular el máximo aprovechamiento. | 8 |
+| **5** | **US09** | Carga e Importación Masiva de Despiece desde Excel | Como Vendedor / Operario, deseo cargar planillas en Excel (.xlsx / .csv) con el listado de medidas y cantidades, para agilizar proyectos de gran escala. | 5 |
+| **6** | **US11** | Sugerencia y Aprovechamiento de Retazos | Como Vendedor, deseo consultar sobrantes reutilizables en almacén, para usarlos en cortes pequeños y reducir desperdicios. | 3 |
+| **7** | **US12** | Conversión de Cotización a Pedido | Como Vendedor, deseo transformar una cotización en pedido registrando el cobro del adelanto inicial, para iniciar la producción. | 3 |
+| **8** | **US19** | Cierre de Caja Diario y Conciliación de Pagos | Como Vendedor o Administrador, deseo registrar y cuadrar los ingresos diarios (efectivo, Yape, Plin, transferencias), para asegurar la conciliación de caja al final del turno. | 3 |
+| **9** | **US13** | Seguimiento de Pedidos en Taller | Como Vendedor o CEO, deseo monitorear la fase de preparación de los vidrios, para coordinar la entrega con el cliente. | 3 |
+| **10** | **US20** | Agenda y Coordinación de Instalaciones en Obra | Como Vendedor o Administrador, deseo asignar fechas, horas y cuadrillas de técnicos para la instalación de proyectos en domicilio, para evitar cruces de agenda y asegurar despachos puntuales. | 5 |
+| **11** | **US14** | Control de Stock y Alerta de Reabastecimiento | Como CEO, deseo controlar el inventario de planchas y perfiles, para reponer insumos oportunamente. | 3 |
+| **12** | **US18** | Gestión de Compras y Proveedores de Insumos | Como CEO / Administrador, deseo registrar órdenes de compra a proveedores de vidrio y aluminio, para actualizar automáticamente el stock al recibir nueva mercadería. | 5 |
+| **13** | **US15** | Emisión de Proformas en PDF | Como Vendedor, deseo generar proformas oficiales en PDF, para entregar al cliente en mostrador o WhatsApp. | 2 |
+| **14** | **US21** | Notificaciones Automáticas al Cliente (WhatsApp/Email) | Como Vendedor, deseo enviar alertas automáticas al cliente cuando su pedido cambie de estado (En corte / Listo para entrega / En camino), para mejorar la experiencia de servicio. | 3 |
+| **15** | **US01** | Catálogo Informativo de Productos | Como visitante de la web, deseo explorar los tipos de vidrios y perfiles en la Landing Page, para conocer la oferta del negocio. | 2 |
+| **16** | **US02** | Solicitud de Cotización Directa | Como cliente interesado, deseo enviar mis datos y detalles de mi proyecto desde la Landing Page, para ser contactado por un vendedor. | 3 |
+| **17** | **US17** | Conmutador de Idioma (ES/EN) en Landing | Como visitante extranjero, deseo cambiar el idioma de la Landing Page a inglés, para entender los servicios ofertados. | 2 |
+| **18** | **US16** | Dashboard de Reportes de Ventas para el CEO | Como CEO, deseo visualizar gráficos e indicadores de ingresos, para evaluar la rentabilidad del negocio. | 5 |
+| **19** | **US03** | Gestión y Alta de Usuarios Internos | Como CEO, deseo crear y administrar las cuentas de los vendedores, para controlar quién accede al sistema interno. | 2 |
+| **20** | **US04** | Inicio de Sesión Interno con JWT | Como trabajador, deseo autenticarme de forma segura, para obtener un token JWT que autorice mis operaciones comerciales. | 3 |
+| **21** | **US05** | Control de Acceso por IP y Subdominio | Como CEO, deseo restringir el ingreso a `admin.vidrieriaalpamayo.com` únicamente a las IPs de la vidriería, para evitar intromisiones remotas. | 3 |
+| **22** | **TS01** | Arquitectura Base Angular + Signals/RxJS + PrimeNG | Como Developer, deseo configurar la base del proyecto frontend en Angular, para optimizar el cotizador en tiempo real. | 5 |
+| **23** | **TS02** | Pipeline CI/CD para Landing Page en GitHub Pages | Como DevOps Engineer, deseo automatizar el despliegue de la Landing Page en GitHub Pages, para actualizar los cambios tras cada commit. | 2 |
+| **24** | **TS03** | Aislamiento por Subdominios y Enrutamiento HTTPS | Como DevOps Engineer, deseo forzar el uso de HTTPS/TLS y configurar subdominios independientes, para garantizar comunicaciones seguras. | 3 |
+| **25** | **TS04** | Middleware Backend de Validación JWT y Filtrado IP | Como Backend Developer, deseo implementar un middleware que verifique el token JWT y valide la IP de origen, para proteger las llamadas privadas. | 3 |
